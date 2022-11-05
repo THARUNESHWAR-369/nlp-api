@@ -40,6 +40,8 @@ class LOAD_MODEL:
         
         for models in __MODEL_PATHS:
             
+            print(models)
+            
             __MODELS.append(pickle.load(open(models, 'rb')))
             
         return __MODELS
