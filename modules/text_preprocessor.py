@@ -40,7 +40,9 @@ class NLP_PREPROCESS:
         return [self.__LEMMATIZER.lemmatize(sw) for sw in stem_words]
     
     def preprocess(self):
+        print("self.__text: ",self.__text)
         __tokenize_words = self.__do_tokenize(self.__text)
+        print("__tokenize_words: ",__tokenize_words)
         __stopwords = self.__do_stopword(__tokenize_words)
         __stemming_words = self.__do_stemming(__stopwords)
         __lemmentize_words = self.__do_lemmentize(__stemming_words)
