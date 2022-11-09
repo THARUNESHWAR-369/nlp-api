@@ -1,4 +1,3 @@
-
 import pickle
 import os
 
@@ -32,19 +31,22 @@ class LOAD_MODEL:
             __MODEL_PATHS.append(f"{path}/{os.listdir(path)[0]}")
         return __MODEL_PATHS
     
-    def load(self) -> list:
+    def load(self) -> dict:
         __PATHS = self.__get_subDirs()
         __MODEL_PATHS = self.__get_modelPath(__PATHS)
         
-        __MODELS = []
+        __MODELS = {}
         
         for models in __MODEL_PATHS:
             
-            print("models: ",models)
+            print("\n\n\tmodels: ",models)
             
-            __MODELS.append(pickle.load(open(models, 'rb')))
+            __MODELS.update(
+                {
+                    str(models).split("/")[-2] : pickle.load(open(models, 'rb'))
+                    
+                }
+            )
             
         return __MODELS
         
-        
-    
