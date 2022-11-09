@@ -1,4 +1,4 @@
-fastapi]
+fastapi
 joblib
 matplotlib
 nltk
