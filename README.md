@@ -2,7 +2,7 @@
 
 `Demo url : `https://tech-ai-nlp.onrender.com/docs#/default/sentiment_api_v1_sentiment_analysis__get
 
-### Sample image
+### Screenshots
 > ### sample input
 > <img src="https://github.com/THARUNESHWAR-369/nlp-api/blob/main/modules/input.png"/>
 > output
